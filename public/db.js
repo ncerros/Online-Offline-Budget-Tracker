@@ -16,3 +16,28 @@ request.onsuccess = function(event) {
     checkDatabase();
   }
 }; 
+
+request.onerror = function(event) {
+    console.log("Woops! " + event.target.errorCode);
+  };
+  
+  function saveRecord(record) {
+    // This function will create a transaction on the pending db with readwrite access
+    const transaction = db.transaction(["pending"], "readwrite");
+  
+    const store = transaction.objectStore("pending");
+  
+    // will add a record to the store 
+    store.add(record);
+  }
+  
+  function checkDatabase() {
+    // create a transaction then will access the pending object store
+    const transaction = db.transaction(["pending"], "readwrite");
+
+    const store = transaction.objectStore("pending");
+    // will get all records from store and create a variable
+    const getAll = store.getAll();
+
+    
+
