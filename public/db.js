@@ -39,5 +39,32 @@ request.onerror = function(event) {
     // will get all records from store and create a variable
     const getAll = store.getAll();
 
+    getAll.onsuccess = function() {
+        if (getAll.result.length > 0) {
+          fetch("/api/transaction/bulk", {
+            method: "POST",
+            body: JSON.stringify(getAll.result),
+            headers: {
+              Accept: "application/json, text/plain, */*",
+              "Content-Type": "application/json"
+            }
+          })
+          .then(response => response.json())
+          .then(() => {
+            // will create a transaction on the pending db
+            const transaction = db.transaction(["pending"], "readwrite");
+
+            const store = transaction.objectStore("pending");
     
+            // will clear the store
+            store.clear();
+          });
+        }
+      };
+    }
+    
+    // will listen when the app come back online again
+    window.addEventListener("online", checkDatabase);
+
+
 
