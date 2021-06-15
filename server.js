@@ -5,7 +5,7 @@ const compression = require("compression");
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 app.use(logger("dev"));
 
@@ -17,7 +17,7 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/budget-tracker", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  
 });
 
 // routes
