@@ -9,6 +9,13 @@ A very useful app to keep track of a daily budget with or without connection. A 
 
 [Deployed Heroku app](https://evening-oasis-60943.herokuapp.com/)
 
+![budget-tracker](images/online1.png)
+
+![budget-tracker](images/online2.png)
+
+![budget-tracker](images/offline1.png)
+
+![budget-tracker](images/offline2.png)
 
 
 # Technologies
@@ -35,4 +42,4 @@ MongoDB for your Heroku NodeJS app documentation
 
 # Contact
 
-For questions and coloboration reach out to n_cerros@hotmail.com
+For questions and collaboration reach out to n_cerros@hotmail.com
