@@ -2,7 +2,7 @@
 
 # Description
 
-A very useful app to keep track of a daily budget with or without internet connection. A user can add deposits and expenses, either online or offline, a balance of funds each transaction will generate the functionality of the app. The user will have a better way to manage the money without internet connection.
+A very useful app to keep track of a daily budget with or without internet connection. A user can add deposits and expenses, either online or offline, a balance of funds each transaction will generate to the functionality of the app. The user will have a better way to manage the money without internet connection.
 
 
 # Deployment and Images
